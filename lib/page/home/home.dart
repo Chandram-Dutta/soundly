@@ -9,7 +9,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Soundly'),
-        actions: const [ThemeIconButton()],
+        actions: const [
+          ThemeIconButton(),
+        ],
       ),
     );
   }
