@@ -27,6 +27,8 @@ class HomePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.6,
               child: ElevatedButton(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: const [
                     Icon(CupertinoIcons.play_arrow_solid),
                     SizedBox(width: 10),
