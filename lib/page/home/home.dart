@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'package:soundly/page/home/widgets/theme_icon_button.dart';
@@ -25,7 +26,13 @@ class HomePage extends StatelessWidget {
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.6,
               child: ElevatedButton(
-                child: const Text("Start"),
+                child: Row(
+                  children: const [
+                    Icon(CupertinoIcons.play_arrow_solid),
+                    SizedBox(width: 10),
+                    Text("Start"),
+                  ],
+                ),
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
