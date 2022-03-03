@@ -16,7 +16,10 @@ class MyApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       title: 'Soundly',
       theme: ref.watch(themeProvider),
-      home: const HomePage(),
+      routes: {
+        '/': (context) => const HomePage(),
+      },
+      initialRoute: '/',
     );
   }
 }

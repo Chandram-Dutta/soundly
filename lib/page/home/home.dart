@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rive/rive.dart';
 import 'package:soundly/page/home/widgets/theme_icon_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,6 +14,33 @@ class HomePage extends StatelessWidget {
           ThemeIconButton(),
         ],
       ),
+      body: Column(children: [
+        const Expanded(
+          flex: 2,
+          child: RiveAnimation.asset("assets/rive/soundly_rive.riv"),
+        ),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 50),
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width * 0.6,
+              child: ElevatedButton(
+                child: const Text("Start"),
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                  ),
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                      Theme.of(context).colorScheme.secondary),
+                ),
+                onPressed: () {},
+              ),
+            ),
+          ),
+        )
+      ]),
     );
   }
 }
