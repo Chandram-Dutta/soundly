@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:soundly/page/home/home.dart';
+import 'package:soundly/page/prep/prep.dart';
 import 'package:soundly/provider/theme_provider.dart';
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends ConsumerWidget {
       theme: ref.watch(themeProvider),
       routes: {
         '/': (context) => const HomePage(),
+        '/prep': (context) => const PrepPage(),
       },
       initialRoute: '/',
     );
