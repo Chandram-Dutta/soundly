@@ -34,7 +34,7 @@ class PrepPage extends StatelessWidget {
         ),
       ),
       Padding(
-        padding: const EdgeInsets.all(50.0),
+        padding: const EdgeInsets.all(40.0),
         child: Button(
           buttonWid: const [
             Icon(CupertinoIcons.hand_thumbsup_fill),
