@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:soundly/page/home/widgets/button.dart';
 import 'package:soundly/page/home/widgets/theme_icon_button.dart';
 import 'package:soundly/responsive/responsive.dart';
 
@@ -31,6 +33,17 @@ class PrepPage extends StatelessWidget {
           ),
         ),
       ),
+      Padding(
+        padding: const EdgeInsets.all(50.0),
+        child: Button(
+          buttonWid: const [
+            Icon(CupertinoIcons.hand_thumbsup_fill),
+            SizedBox(width: 10),
+            Text("Done"),
+          ],
+          function: () {},
+        ),
+      )
     ];
     return Scaffold(
       appBar: AppBar(
